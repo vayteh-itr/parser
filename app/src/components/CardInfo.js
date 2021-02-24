@@ -20,7 +20,7 @@ export default function CardInfo() {
         <Typography className={classes.title} color="textSecondary" gutterBottom>
           Result
         </Typography>
-        <Typography variant="h5" component="h3">
+        <Typography variant="h5" component="h5">
           info
         </Typography>
       </CardContent>
