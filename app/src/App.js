@@ -32,8 +32,22 @@ function App() {
   const [value, setValue] = useState('');
 
   const recursion = (elem) => {
+
     elem.childNodes.forEach(element => {
+      console.log("children")
+      const final = []
+        console.log(element.innerText)
+        if (element.innerText) {
+          // console.log(Math.max(elem.innerText.split("").length))
+         let quality = element.innerText.split("").length
+         final.push(quality)
+        }
+        console.log(final)
+        console.log("children")
+      console.log("+++++++++++")
       console.log(element)
+      console.log(element.length)
+      console.log("-----------")
       if (element.nodeName === "#text") {
         return
       }
@@ -41,6 +55,21 @@ function App() {
         recursion(element)
       }
     });
+    // for ( var i = 0; i < elem.length; i++){
+    //     if (elem.nodeName === "#text") {
+    //     return
+    //   }
+    //         console.log("children")
+    //   const final = []
+    //     console.log(elem.innerText)
+    //     if (elem.innerText) {
+    //       // console.log(Math.max(elem.innerText.split("").length))
+    //      let res = elem.innerText.split("").length
+    //      final.push(res)
+    //     }
+    //     console.log(final)
+    //     console.log("children")
+    // }
   }
 
   const handleChange = e => {
